@@ -1,0 +1,29 @@
+const express = require('express')
+const axios = require('axios')
+const cors = require('cors')
+
+const app = express()
+
+app.use(express.json())
+app.use(cors())
+
+app.get("/",(req,res)=>{
+    res.json("form backend and fetch api data")
+})
+
+app.get("/products",async(req,res)=>{
+    try{
+ 
+        const response = await axios.get("https://fakestoreapi.com/products")
+        res.json(response.data)
+    }
+    catch(err){
+        console.log(err)
+    }
+})
+
+
+const port = 8000
+app.listen(port,()=>{
+    console.log("The server listening port is",port)
+})
