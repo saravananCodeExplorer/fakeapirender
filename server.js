@@ -23,7 +23,7 @@ app.get("/products",async(req,res)=>{
 })
 
 
-const port = 8000
+const port = 5000
 app.listen(port,()=>{
     console.log("The server listening port is",port)
 })
