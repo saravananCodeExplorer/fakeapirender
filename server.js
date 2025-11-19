@@ -11,7 +11,7 @@ app.get("/",(req,res)=>{
     res.json("from backend and fetch api data")
 })
 
-app.get("/products",async(req,res)=>{
+app.get("/items",async(req,res)=>{
     try{
  
         const response = await axios.get("https://fakestoreapi.com/products")
