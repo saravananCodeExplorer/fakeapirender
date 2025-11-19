@@ -14,7 +14,7 @@ app.get("/",(req,res)=>{
 app.get("/items",async(req,res)=>{
     try{
  
-        const response = await axios.get("https://fakestoreapi.com/products")
+        const response = await axios.get("https://jsonplaceholder.typicode.com/users")
         res.json(response.data)
     }
     catch(err){
